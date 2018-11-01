@@ -1,0 +1,9 @@
+{
+    "name": "oathapi-test",
+    "version": "1.0.0",
+    "description": "Integration testing for OATH api",
+    "dependencies": {
+        "apickli": "latest",
+        "cucumber": "^5.0.0"
+    }
+}

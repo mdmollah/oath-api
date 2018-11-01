@@ -1,0 +1,12 @@
+language: node_js
+
+sudo: required
+node_js:
+    - "node"
+before_script:
+    - cd test
+    - npm install
+    - npm audit
+    - sudo $(which node) app.js &
+script:
+    - node_modules/.bin/cucumber-js features/oath-sample.feature 
