@@ -4,7 +4,7 @@ Feature:
     Background:
       Given I use the OATH target
 
-    Scenario: Validate Response Code:get_invalid_events
+    Scenario: Validate Response Code:grant_token
         And I set body to {"get_invalid_events_request": {"my_institution": ["CCLABEB0"],"from_date_time": "2017-05-25T09:00:00.000Z","to_date_time": "2017-05-25T17:30:00.000Z","maximum_number": "100"}}
         And I set headers to
           |name                    |value                                                                                 |
