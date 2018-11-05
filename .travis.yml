@@ -8,4 +8,4 @@ before_script:
     - npm install
     - npm audit
 script:
-    - node_modules/.bin/cucumber-js features/mock-oathapi.feature
+    - node_modules/.bin/cucumber-js features/
