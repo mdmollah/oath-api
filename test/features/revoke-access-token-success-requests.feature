@@ -1,8 +1,7 @@
 Feature:
-    Sample OAUTH API Testing
+      Revoke Access Token API Testing - Successfull Request
 
-
-    Scenario: Success Request:Revoke Access Token
+    Scenario: :Revoke Access Token
         Given I use the OAUTH target
         And I set form parameters to
           | parameter     | value           |

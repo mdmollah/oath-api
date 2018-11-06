@@ -1,10 +1,10 @@
 Feature:
-    Sample OAUTH API Testing
+    Refresh Token API Testing - Error Requests
 
     Background:
       Given I use the OAUTH target
 
-    Scenario: Error Request:Refresh - Invalid Token
+    Scenario: Refresh - Invalid Token
       And I set form parameters to
         | parameter     | value          |
         | grant_type    | refresh_token  |
@@ -18,7 +18,7 @@ Feature:
       And response body should contain invalid_grant
       And response body should contain Refresh token is invalid.
 
-    Scenario: Error Request:Refresh - Invalid Client Secret
+    Scenario: Refresh - Invalid Client Secret
       And I set form parameters to
         | parameter     | value          |
         | grant_type    | refresh_token  |
@@ -32,7 +32,7 @@ Feature:
       And response body should contain invalid_client
       And response body should contain Client application cannot be authenticated
 
-    Scenario: Error Request:Refresh - Missing Parameter
+    Scenario: Refresh - Missing Parameter
       And I set form parameters to
         | parameter     | value          |
         | grant_type    | refresh_token  |
@@ -45,7 +45,7 @@ Feature:
       And response body should contain invalid_request
       And response body should contain OAuth refresh token grant request is malformed.
 
-    Scenario: Error Request:Refresh - Unknown Parameter
+    Scenario: Refresh - Unknown Parameter
       And I set form parameters to
         | parameter     | value          |
         | grant_type    | refresh_token  |

@@ -1,7 +1,7 @@
 Feature:
-    Sample OAUTH API Testing
+    Grant Token API Testing - Successfull Request
 
-    Scenario: Success Request:grant_token
+    Scenario: Grant Token
         Given I use the OAUTH target
         And I set form parameters to
           | parameter   | value           |
@@ -22,4 +22,4 @@ Feature:
         And response body path $.expires_in should not be null
         And response body path $.refresh_count should not be null
         And response body path $.token_type should be BearerToken
-        And response body path $.refresh_count should be 0  
+        And response body path $.refresh_count should be 0

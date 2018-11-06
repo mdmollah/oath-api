@@ -1,10 +1,10 @@
 Feature:
-    Sample OAUTH API Testing
+    Grant Token API Testing - Error Requests
 
     Background:
       Given I use the OAUTH target
 
-    Scenario: Error Request:Grant - Invalid Password
+    Scenario: Grant - Invalid Password
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | password        |
@@ -19,7 +19,7 @@ Feature:
         And response body should contain invalid_grant
         And response body should contain Subject requesting access cannot be authenticated.
 
-    Scenario: Error Request:Grant - Invalid Client Secret
+    Scenario: Grant - Invalid Client Secret
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | password        |
@@ -34,7 +34,7 @@ Feature:
         And response body should contain invalid_client
         And response body should contain Client application cannot be authenticated
 
-    Scenario: Error Request:Grant - Invalid Grant Type
+    Scenario: Grant - Invalid Grant Type
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | implicit        |
@@ -49,7 +49,7 @@ Feature:
         And response body should contain unsuupported_grant_typet
         And response body should contain Only password grant type honored here.
 
-    Scenario: Error Request:Grant - Missing Parameter
+    Scenario: Grant - Missing Parameter
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | password        |
@@ -63,7 +63,7 @@ Feature:
         And response body should contain invalid_request
         And response body should contain OAuth token grant request is malformed.
 
-    Scenario: Error Request:Grant - Unknown Parameter
+    Scenario: Grant - Unknown Parameter
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | password        |

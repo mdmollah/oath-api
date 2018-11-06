@@ -1,10 +1,10 @@
 Feature:
-    Sample OAUTH API Testing
+    Revoke Access Token API Testing - Error Requests
 
     Background:
       Given I use the OAUTH target
 
-    Scenario: Error Request:Revoke - Invalid Token Type Hint
+    Scenario: Revoke - Invalid Token Type Hint
         And I set form parameters to
           | parameter     | value              |
           | token              | access_token  |
@@ -18,7 +18,7 @@ Feature:
         And response body should contain invalid_request
         And response body should contain OAuth revoke token grant request is malformed.
 
-    Scenario: Error Request:Revoke - Invalid Client Secret
+    Scenario: Revoke - Invalid Client Secret
         And I set form parameters to
           | parameter     | value              |
           | token              | access_token  |

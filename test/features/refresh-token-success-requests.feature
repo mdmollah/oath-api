@@ -1,8 +1,8 @@
 Feature:
-    Sample OAUTH API Testing
+    Refresh Token API Testing - Successfull Request
 
 
-    Scenario: Success Request:Refresh token
+    Scenario: Refresh token
         Given I use the OAUTH target
         And I set form parameters to
           | parameter     | value           |

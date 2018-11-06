@@ -1,8 +1,8 @@
 Feature:
-    Sample OAUTH API Testing
+    Refresh Unknow Access Token API Testing - Successfull Request
 
 
-    Scenario: Success Request:Refresh unknow access token
+    Scenario: Refresh unknow access token
         Given I use the OAUTH target
         And I set form parameters to
           | parameter          | value           |

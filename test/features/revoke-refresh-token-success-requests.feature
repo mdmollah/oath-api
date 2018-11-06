@@ -1,9 +1,7 @@
 Feature:
-    Sample OAUTH API Testing
+    Revoke Refresh Token API Testing - Successfull Request
 
-
-
-    Scenario: Success Request:Revoke Refresh token
+    Scenario: Revoke Refresh token
         Given I use the OAUTH target
         And I set form parameters to
           | parameter     | value           |
