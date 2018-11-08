@@ -6,12 +6,12 @@ Feature:
         And I set form parameters to
           | parameter   | value           |
           | grant_type  | password        |
-          | username    | gooduser        |
-          | password    | valid_password  |
+          | username    | demo-user        |
+          | password    | demo-password  |
         And I set headers to
           |name                    |value                                                                        |
           | Content-Type           | application/x-www-form-urlencoded                                           |
-          | Authorization          | Basic bFd1VklqbnFPZ1gzWmJHMk95alhRTHExWHptbTJDalk6WUFWQzJmbUwyMnNIM1RTeQ==  |
+          | Authorization          | Basic eVZHaEtpVjV6MVpHZGFxRlhvWjhBaVNBOW41Q3JZNkI6cHl2SEVtR3JOcVJIQkhScA==  |
         When I POST to /token
         Then response code should be 200
         And response body should be valid json
