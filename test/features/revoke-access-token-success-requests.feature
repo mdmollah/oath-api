@@ -16,8 +16,6 @@ Feature:
       Then response code should be 200
       And I store the value of body path $.access_token as accesstoken in global scope
 
-
-
     Scenario: :Revoke Access Token
         Given I use the OAUTH target
         And I set form parameters to

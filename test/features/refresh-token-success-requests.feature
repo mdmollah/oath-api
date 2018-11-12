@@ -2,12 +2,27 @@ Feature:
     Refresh Token API Testing - Successfull Request
 
 
+    Scenario: Grant Token - prerequisite to get refresh token
+        Given I use the OAUTH target
+        And I set form parameters to
+          | parameter   | value           |
+          | grant_type  | password        |
+          | username    | demo-user       |
+          | password    | demo-password   |
+        And I set headers to
+          |name                    |value                                                                        |
+          | Content-Type           | application/x-www-form-urlencoded                                           |
+          | Authorization          | Basic eVZHaEtpVjV6MVpHZGFxRlhvWjhBaVNBOW41Q3JZNkI6cHl2SEVtR3JOcVJIQkhScA==  |
+        When I POST to /token
+        Then response code should be 200
+        And I store the value of body path $.refresh_token as refreshtoken in global scope
+
     Scenario: Refresh token
         Given I use the OAUTH target
         And I set form parameters to
-          | parameter     | value                             |
-          | grant_type    | refresh_token                     |
-          | refresh_token | gPBuojafy43lKYwA8tPjrzqiGHgkgGwi  |
+          | parameter     | value             |
+          | grant_type    | refresh_token     |
+          | refresh_token | `refreshtoken`    |
         And I set headers to
           |name                    |value                                                                        |
           | Content-Type           | application/x-www-form-urlencoded                                           |
